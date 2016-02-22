@@ -1,6 +1,6 @@
 package com.tinynote.seredasv.di.modules;
 
-import android.app.Application;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import dagger.Module;
@@ -10,21 +10,21 @@ import javax.inject.Singleton;
 
 @Module
 public class ApplicationModule {
-    Application application;
+    Context context;
 
-    public ApplicationModule(Application application) {
-        this.application = application;
+    public ApplicationModule(Context context) {
+        this.context = context;
     }
 
     @Provides
     @Singleton
-    Application provideApplication() {
-        return application;
+    Context provideContext() {
+        return context;
     }
 
     @Provides
     @Singleton
     SharedPreferences provideSharedPreferences() {
-        return PreferenceManager.getDefaultSharedPreferences(application);
+        return PreferenceManager.getDefaultSharedPreferences(context);
     }
 }
