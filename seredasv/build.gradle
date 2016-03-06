@@ -63,4 +63,9 @@ dependencies {
     //annotations
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
+
+    //material drawer
+    compile('com.mikepenz:materialdrawer:5.1.0@aar') {
+        transitive = true
+    }
 }
