@@ -1,4 +1,6 @@
 package com.tinynote.seredasv.models.settings;
 
-public class SettingsModel {
+import io.realm.RealmObject;
+
+public class SettingsModel extends RealmObject {
 }

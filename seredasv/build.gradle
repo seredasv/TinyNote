@@ -44,15 +44,18 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    //standart
+    //standard
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:cardview-v7:23.1.1'
     compile 'com.android.support:recyclerview-v7:23.1.1'
 
-    //helpers
+    //events
     compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.j256.ormlite:ormlite-android:4.48'
+
+    //rest
     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+
+    //image loading
     compile 'com.squareup.picasso:picasso:2.5.2'
 
     //DI
@@ -68,4 +71,7 @@ dependencies {
     compile('com.mikepenz:materialdrawer:5.1.0@aar') {
         transitive = true
     }
+
+    //database
+    compile 'io.realm:realm-android:0.87.5'
 }
