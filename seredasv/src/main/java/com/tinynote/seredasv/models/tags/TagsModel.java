@@ -13,6 +13,9 @@ public class TagsModel extends RealmObject {
     @Required
     private String name;
 
+    public TagsModel() {
+    }
+
     public TagsModel(int id, String name) {
         this.id = id;
         this.name = name;

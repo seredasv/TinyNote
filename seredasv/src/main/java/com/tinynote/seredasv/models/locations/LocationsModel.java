@@ -17,6 +17,9 @@ public class LocationsModel extends RealmObject {
     private float longitude;
     private float altitude;
 
+    public LocationsModel() {
+    }
+
     public LocationsModel(int id, String name, float latitude, float longitude, float altitude) {
         this.id = id;
         this.name = name;

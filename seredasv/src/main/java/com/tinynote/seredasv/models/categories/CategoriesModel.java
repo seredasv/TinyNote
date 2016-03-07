@@ -15,6 +15,9 @@ public class CategoriesModel extends RealmObject {
 
     private int color;
 
+    public CategoriesModel() {
+    }
+
     public CategoriesModel(int id, String name, int color) {
         this.id = id;
         this.name = name;
