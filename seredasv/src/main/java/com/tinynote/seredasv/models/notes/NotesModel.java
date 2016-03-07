@@ -20,8 +20,8 @@ public class NotesModel extends RealmObject {
     private String content;
     private Date date;
     private LocationsModel location;
+    private CategoriesModel category;
 
-    private RealmList<CategoriesModel> categories;
     private RealmList<TagsModel> tags;
 
     public int getId() {
@@ -64,19 +64,19 @@ public class NotesModel extends RealmObject {
         this.location = location;
     }
 
-    public RealmList<CategoriesModel> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(RealmList<CategoriesModel> categories) {
-        this.categories = categories;
-    }
-
     public RealmList<TagsModel> getTags() {
         return tags;
     }
 
     public void setTags(RealmList<TagsModel> tags) {
         this.tags = tags;
+    }
+
+    public CategoriesModel getCategory() {
+        return category;
+    }
+
+    public void setCategory(CategoriesModel category) {
+        this.category = category;
     }
 }
