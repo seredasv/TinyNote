@@ -54,7 +54,7 @@ public class CategoriesFragment extends Fragment {
     }
 
     private void createRecyclerView() {
-        adapter = new CategoriesAdapter(getFakeData());
+        adapter = new CategoriesAdapter(getActivity(), getFakeData());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);

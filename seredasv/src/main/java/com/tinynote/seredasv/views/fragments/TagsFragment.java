@@ -54,7 +54,7 @@ public class TagsFragment extends Fragment {
     }
 
     private void createRecyclerView() {
-        adapter = new TagsAdapter(getFakeData());
+        adapter = new TagsAdapter(getActivity(), getFakeData());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);

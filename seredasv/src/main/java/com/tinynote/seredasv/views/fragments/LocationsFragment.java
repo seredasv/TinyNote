@@ -55,7 +55,7 @@ public class LocationsFragment extends Fragment {
     }
 
     private void createRecyclerView() {
-        adapter = new LocationsAdapter(getFakeData());
+        adapter = new LocationsAdapter(getActivity(), getFakeData());
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(adapter);
