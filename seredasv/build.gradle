@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.android.tools.build:gradle:1.5.0'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
     }
 }
@@ -33,6 +33,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        generatedDensities = []
     }
     buildTypes {
         release {
@@ -40,14 +41,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     //standard
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:cardview-v7:23.1.1'
-    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:cardview-v7:23.2.0'
+    compile 'com.android.support:recyclerview-v7:23.2.0'
 
     //events
     compile 'org.greenrobot:eventbus:3.0.0'
