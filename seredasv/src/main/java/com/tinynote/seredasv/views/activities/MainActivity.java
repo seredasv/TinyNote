@@ -3,6 +3,7 @@ package com.tinynote.seredasv.views.activities;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -13,6 +14,7 @@ import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.tinynote.seredasv.R;
+import com.tinynote.seredasv.helpers.sliding_tab.SlidingTabLayout;
 import com.tinynote.seredasv.views.MainApplication;
 import com.tinynote.seredasv.views.fragments.CategoriesFragment;
 import com.tinynote.seredasv.views.fragments.LocationsFragment;
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
                                 finish();
                                 break;
                         }
+                        drawer.closeDrawer();
                         return true;
                     }
                 })

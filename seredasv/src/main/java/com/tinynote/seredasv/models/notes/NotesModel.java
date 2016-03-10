@@ -24,6 +24,20 @@ public class NotesModel extends RealmObject {
 
     private RealmList<TagsModel> tags;
 
+    public NotesModel() {
+    }
+
+    public NotesModel(int id, String title, String content, Date date, LocationsModel location, CategoriesModel category,
+                      RealmList<TagsModel> tags) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.date = date;
+        this.location = location;
+        this.category = category;
+        this.tags = tags;
+    }
+
     public int getId() {
         return id;
     }

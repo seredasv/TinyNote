@@ -1,6 +1,7 @@
 package com.tinynote.seredasv.views.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -32,7 +33,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
     public void onBindViewHolder(ViewHolder holder, int position) {
         CategoriesModel item = list.get(position);
         holder.llColor.setVisibility(View.VISIBLE);
-        holder.llColor.setBackgroundColor(context.getResources().getColor(item.getColor()));
+        holder.llColor.setBackgroundColor(Color.parseColor(item.getColor()));
         holder.tvName.setText(item.getName());
 
         //TODO calc quantity

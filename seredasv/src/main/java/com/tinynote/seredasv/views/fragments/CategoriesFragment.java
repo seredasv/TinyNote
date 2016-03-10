@@ -66,9 +66,9 @@ public class CategoriesFragment extends Fragment {
 
     private LinkedList<CategoriesModel> getFakeData() {
         LinkedList<CategoriesModel> categories = new LinkedList<>();
-        categories.add(new CategoriesModel(0, "one", 10));
-        categories.add(new CategoriesModel(1, "two", 20));
-        categories.add(new CategoriesModel(2, "three", 30));
+        categories.add(new CategoriesModel(0, "one", "#636161"));
+        categories.add(new CategoriesModel(1, "two", "#636161"));
+        categories.add(new CategoriesModel(2, "three", "#636161"));
 
         return categories;
     }

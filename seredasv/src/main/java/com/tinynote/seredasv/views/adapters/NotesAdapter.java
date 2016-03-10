@@ -1,12 +1,12 @@
 package com.tinynote.seredasv.views.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.tinynote.seredasv.R;
@@ -16,6 +16,8 @@ import java.util.Date;
 import java.util.LinkedList;
 
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> {
+    private static final int TEXT_LENGTH = 80;
+
     private Context context;
     private LinkedList<NotesModel> list;
 
@@ -33,15 +35,15 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         NotesModel item = list.get(position);
-        holder.llColor.setBackgroundColor(context.getResources().getColor(item.getCategory().getColor()));
+        holder.llColor.setBackgroundColor(Color.parseColor(item.getCategory().getColor()));
 
         Date date = item.getDate();
-        holder.tvWeekDay.setText(date.getDay());
-        holder.tvDate.setText(date.getDate());
-        holder.tvTime.setText(date.getHours() + ":" + date.getMinutes());
+        holder.tvWeekDay.setText(String.valueOf(date.getDay()));
+        holder.tvDate.setText(String.valueOf(date.getDate()));
+        holder.tvTime.setText(String.valueOf(date.getHours()) + ":" + String.valueOf(date.getMinutes()));
 
         holder.tvTitle.setText(item.getTitle());
-        holder.tvContent.setText(item.getContent().substring(0, 100));
+        holder.tvContent.setText(item.getContent().substring(0, TEXT_LENGTH));
 
         if (item.getCategory().getName() != null && item.getCategory().getName().length() > 0) {
             holder.llCategory.setVisibility(View.VISIBLE);
