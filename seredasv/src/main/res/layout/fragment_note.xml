@@ -151,7 +151,7 @@
         </HorizontalScrollView>
 
         <io.github.mthli.knife.KnifeText
-            android:id="@+id/knife_text"
+            android:id="@+id/et_knife"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/tools"
